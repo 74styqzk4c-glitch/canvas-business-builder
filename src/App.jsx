@@ -114,6 +114,7 @@ function importProjectsFromJSON(file, setProjects, setActiveId) {
       alert("El archivo no es válido o está corrupto.");
     }
   };
+  
 
   reader.readAsText(file);
 }
