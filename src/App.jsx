@@ -1,5 +1,8 @@
 
 import React, { useEffect, useMemo, useState } from "react";
+
+import boards360Logo from './assets/boards360-logo.svg';
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -114,7 +117,6 @@ function importProjectsFromJSON(file, setProjects, setActiveId) {
 
   reader.readAsText(file);
 }
-``
 
 function exportSingleProjectToJSON(project) {
   const data = {
@@ -990,6 +992,21 @@ export default function CanvasBusinessBuilderV2() {
   return (
     <TooltipProvider>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white p-4 md:p-6">
+
+       {/* Boards360 brand header */}
+<div className="mx-auto max-w-7xl flex items-center gap-3 mb-4">
+  <img
+    src={boards360Logo}
+    alt="Boards360.net"
+    className="h-8 w-auto"
+  />
+  <div className="leading-tight">
+    <div className="text-sm font-semibold text-slate-900">Boards360.net</div>
+    <div className="text-xs text-slate-500">B360 Canvas Gen</div>
+  </div>
+</div>
+
+
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-4 min-h-0">
           {/* Sidebar */}
           <Card className="rounded-2xl shadow-sm min-h-0">
